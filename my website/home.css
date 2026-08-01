@@ -1,0 +1,94 @@
+:root {
+  --barney-start: #8e2de2;
+  --barney-stop: #4a00e0;
+  --barney-bg-color: #250070;
+  --barney-color: rgba(255, 255, 255, 0.8);
+  --barney-input-bg-color: rgba(0, 0, 0, 0.4);
+  --barney-input-focus-bg-color: rgba(0, 0, 0, 0.7);
+  --barney-placeholder-color: rgba(255, 255, 255, 0.7);
+  --barney-submit-color: #fff;
+
+  --bg-color: var(--barney-bg-color);
+  --color: var(--barney-color);
+  --start: var(--barney-start);
+  --stop: var(--barney-stop);
+  --input-bg-color: var(--barney-input-bg-color);
+  --input-focus-bg-color: var(--barney-input-focus-bg-color);
+  --placeholder-color: var(--barney-placeholder-color);
+  --submit-color: var(--barney-submit-color);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--color);
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  transition: background-color 300ms ease-in-out;
+}
+
+form {
+  background: linear-gradient(225deg, var(--start) 16%, var(--stop) 100%);
+  border-radius: 12px;
+  padding: 30px 40px;
+  text-align: center;
+  width: 350px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+input[type="text"],
+input[type="password"] {
+  background-color: var(--input-bg-color);
+  border: none;
+  border-radius: 6px;
+  color: var(--color);
+  font-size: 16px;
+  padding: 14px 12px;
+  width: 100%;
+  margin-bottom: 15px;
+  transition: all 250ms ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  background-color: var(--input-focus-bg-color);
+  outline: none;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
+::placeholder {
+  color: var(--placeholder-color);
+  font-size: 16px;
+  opacity: 1;
+}
+
+input[type="submit"] {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  color: var(--submit-color);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 10px;
+  width: 100%;
+  transition: background 200ms ease-in-out, transform 100ms ease;
+}
+
+input[type="submit"]:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+input[type="submit"]:active {
+  transform: scale(0.98);
+}
